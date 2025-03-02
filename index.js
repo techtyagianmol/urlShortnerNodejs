@@ -11,7 +11,7 @@ const staticRoute = require('./routes/staticRouter')
 const  app = express();
 const PORT = 8001;
 
-connectToMongoDB(process.env.MONGODB_URI).then(()=> console.log('mongodb connected'))
+connectToMongoDB(`${process.env.MONGODB_URI}`).then(()=> console.log('mongodb connected'))
 
 app.set("view engine", "ejs");
 app.set("views", path.resolve("./views"));
